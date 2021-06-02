@@ -1,0 +1,38 @@
+.alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 0.5rem 1rem;
+  // height: 3rem;
+  width: 20rem;
+  border: 1px solid;
+  border-radius: $btn-border-radius-lg;
+}
+
+.alert-default {
+  @include alert-style($primary);
+}
+
+.alert-success {
+  @include alert-style($success);
+}
+.alert-danger {
+  @include alert-style($danger);
+}
+.alert-warning {
+  @include alert-style($warning);
+}
+.alert__header {
+  display: flex;
+  // flex-basis: 100%;
+  // flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+.alert__title {
+  color: $white;
+}
+.alert__description {
+  color: $white;
+}

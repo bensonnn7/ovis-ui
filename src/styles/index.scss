@@ -1,0 +1,20 @@
+// when scss file start with _ it is called partials,
+// it stop scss compile it to css file, when import don need to add _
+// partical过的scss 文件 无法变异成css文件， 只能导入，无法单独使用
+// config
+@import "variables";
+
+// layout
+@import "reboot";
+
+//mixin
+@import "mixin";
+
+// * button
+@import "../components/Button/style";
+
+// * alert
+@import "../components/Alert/style";
+
+// * menu
+@import "../components/Menu/style";
