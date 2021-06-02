@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useContext } from "react";
 import classNames from "classnames";
+
 import { MenuContext } from "./Menu";
 
 export interface MenuItemProps {
