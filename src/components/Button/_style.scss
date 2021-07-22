@@ -20,7 +20,7 @@
   cursor: pointer;
   transition: $btn-transition;
   // first one disable class
-  &.disabled,
+  &:disabled,
   // second
   &[disabled] {
     cursor: not-allowed;

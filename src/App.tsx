@@ -1,5 +1,8 @@
 import React from "react";
-import Button from "./components/Button/Button";
+import Toggle from "./components/toggle";
+import Switch from "./components/toggle/switch";
+
+import Button from "./components/Button";
 import Alert from "./components/Alert/Alert";
 import Menu from "./components/Menu/Menu";
 import MenuItem from "./components/Menu/MenuItem";
@@ -12,34 +15,24 @@ library.add(fas);
 const App: React.FC = () => {
   return (
     <>
-      <Menu
-      // mode="vertical"
-      >
-        <MenuItem>link1</MenuItem>
-        <MenuItem disabled>link2</MenuItem>
-        <MenuItem>link3</MenuItem>
-        <SubMenu title="Sub Menu">
-          <MenuItem>sub menu 1</MenuItem>
-          <MenuItem>sub menu 2</MenuItem>
-          <MenuItem>sub menu 3</MenuItem>
-        </SubMenu>
-      </Menu>
+      <Toggle onToggle={(on) => console.log("toggle switch", on)}>
+        <Toggle.Switch />
+        <Toggle.On>123</Toggle.On>
+      </Toggle>
       {/* <Button>Hello</Button>
-      <Button disabled autoFocus>
-        Disable button
-      </Button>
-      <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
+      <Button disabled>Disable button</Button>
+      <Button btnType={"danger"} size={"sm"}>
         small danger
       </Button>
-      <Button btnType={ButtonType.Link} href="www.google.com">
+      <Button btnType={"link"} href="www.google.com">
         Link
       </Button>
-      <Button btnType={ButtonType.Link} href="www.google.com" disabled>
+      <Button btnType={"link"} href="www.google.com" disabled>
         disable Link
       </Button>
       <Button btnType={"primary"} size={"lg"}>
         large parimary
-      </Button> 
+      </Button>
       <Button btnType={"primary"} size={"sm"}>
         large parimary
       </Button> */}

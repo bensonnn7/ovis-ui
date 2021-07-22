@@ -3,7 +3,6 @@ import classNames from "classnames";
 
 export type ButtonSize = "lg" | "sm";
 export type ButtonType = "primary" | "default" | "danger" | "link";
-
 interface BaseButtonProps {
   className?: string;
   disabled?: boolean;
@@ -16,15 +15,7 @@ type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>;
 type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>;
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
-/**
- * 页面中最常用的的按钮元素，适合于完成特定的交互
- * ### 引用方法
- *
- * ~~~js
- * import { Button } from 'vikingship'
- * ~~~
- */
-
+// const Button: FC<ButtonProps>
 const Button: FC<ButtonProps> = (props) => {
   const {
     btnType,
@@ -39,7 +30,7 @@ const Button: FC<ButtonProps> = (props) => {
   const classes = classNames("btn", className, {
     [`btn-${btnType}`]: btnType,
     [`btn-${size}`]: size,
-    disabled: btnType === "link" && disabled,
+    disabled: disabled,
   });
 
   if (btnType === "link" && href) {
